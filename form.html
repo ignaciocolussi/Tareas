@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Titulo</h1>
+      <form action="#" title="form">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" required />
+        </div>
+        <div>
+          <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" required />
+        </div>
+        <div>
+          <label for="edad">Edad</label>
+          <input type="number" min="15" name="edad" id="edad" required />
+        </div>
+
+        <div>
+          <legend>Estudios</legend>
+          <input
+            type="checkbox"
+            id="primario"
+            name="estudios"
+            value="Primario"
+          />
+          <label for="primario"> Primario</label>
+          <input
+            type="checkbox"
+            id="secundario"
+            name="estudios"
+            value="Secundario"
+          />
+          <label for="secundario"> Secundario</label>
+          <input
+            type="checkbox"
+            id="terciario"
+            name="estudios"
+            value="Terciario"
+          />
+          <label for="terciario"> Terciario</label>
+        </div>
+
+        <div>
+          <legend>Estado Civil</legend>
+          <input type="radio" id="soltero" name="estadoCivil" value="Soltero" />
+          <label for="soltero">Soltero</label>
+          <input type="radio" id="casado" name="estadoCivil" value="Casado" />
+          <label for="casado">Casado</label>
+          <input type="radio" id="viudo" name="estadoCivil" value="Viudo" />
+          <label for="viudo">Viudo</label>
+        </div>
+
+        <div>
+          <label for="sede">Sede</label>
+          <select name="sede" id="sede" required>
+            <option value="1">Lagos</option>
+            <option value="2">BsAs</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="fechaNac">Fecha de nacimiento</label>
+          <input type="datetime-local" name="fechaNac" id="fechaNac" required />
+        </div>
+
+        <div>
+          <label for="password">Contraseña</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+
+        <button type="submit">Registrarse</button>
+      </form>
+    </main>
+  </body>
+</html>

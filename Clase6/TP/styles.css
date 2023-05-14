@@ -1,0 +1,417 @@
+/* General, reseteo el body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estylos para el header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002060;
+  padding: 10px;
+  color: #fff;
+  width: 100%;
+}
+
+/* Container del logo, la idea es que sea en un bloque solo, y siempre centrado, independiente del viewport. */
+header .centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+header .centrado > span {
+  font-size: 14px;
+  color: #ccc;
+}
+header .centrado .logo {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+/* Borde superior de la nav */
+nav {
+  border-top: 1px solid #ffffff62;
+  padding-top: 0.25rem;
+}
+
+nav a,
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li:last-child {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu a:focus {
+  outline: none;
+}
+
+nav input[type="text"] {
+  background-color: #002060;
+  color: #f4f4f4;
+  border: 0px;
+  border-bottom: 1px solid #fff;
+}
+
+nav input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+aside {
+  flex: 0 0 200px;
+  background-color: #f4f4f4;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+
+.tag {
+  background-color: #000f2c;
+  color: #fff;
+  padding: 2px;
+  font-size: 12px;
+}
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.principal article {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 400px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+article {
+  border-radius: 5px;
+}
+
+article img,
+article picture img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  height: 8vw;
+  object-fit: cover;
+}
+
+article a {
+  margin-bottom: 3px;
+}
+
+.principal article p {
+  height: 100%;
+}
+
+.principal img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.principal h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.principal p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.principal a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #002060;
+  text-decoration: none;
+}
+
+.mas-noticias {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mas-noticias article {
+  width: 300px;
+  border: 1px solid #ccc;
+  margin: 10px;
+
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.mas-noticias picture,
+.mas-noticias img {
+  width: 100%;
+}
+
+.mas-noticias h2 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.mas-noticias a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #002060;
+  text-decoration: none;
+}
+
+.divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.divisor hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.137);
+  margin: 0 10px;
+}
+
+.texto {
+  font-weight: bold;
+}
+
+section.publicidad-horizontal {
+  background-color: #f4f4f4;
+  width: 70%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: #002060;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.footer-columna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-columna h4 {
+  margin-bottom: 5px;
+}
+
+.footer-links,
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.social-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a,
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.redes i {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-right: 1rem;
+  }
+
+  header .fecha {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .container aside {
+    display: none;
+  }
+
+  .principal {
+    max-width: 100%;
+  }
+
+  .principal article,
+  .mas-noticias article {
+    width: 100%;
+  }
+
+  .menu a {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+  }
+
+  .menu a:focus {
+    outline: none;
+  }
+
+  .principal article {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    /* padding: 15px; */
+  }
+
+  .principal h2 {
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .principal p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .principal a {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #002060;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .mas-noticias article {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    /* padding: 15px; */
+  }
+
+  .mas-noticias h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .mas-noticias a {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #002060;
+    text-decoration: none;
+  }
+
+  article img,
+  article picture img {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 20vw;
+    object-fit: cover;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+}
