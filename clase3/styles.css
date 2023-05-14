@@ -1,0 +1,29 @@
+
+.logo{
+    width: 20%;
+    padding: 2rem;
+
+}
+
+
+
+.borderHeader{
+    border-bottom: 1px solid #eb5c14;
+    
+}
+
+.headerFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.textoClaro{
+color: #adadad;
+}
+
+.paddingRight-2{
+    padding-right: 2rem;
+}
+
