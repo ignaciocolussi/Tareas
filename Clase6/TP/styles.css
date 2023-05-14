@@ -6,7 +6,39 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 1.5;
 }
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.00em;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+}
+
 
 /* Estylos para el header */
 header {
@@ -33,7 +65,8 @@ header .centrado > span {
   font-size: 14px;
   color: #ccc;
 }
-header .centrado .logo {
+header .centrado .logo,
+footer .centrado .logo {
   font-size: 38px;
   font-weight: bold;
 }
@@ -270,7 +303,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: self-start;
   max-width: 70%;
   margin: 0 auto;
 }
@@ -304,8 +337,16 @@ footer {
   text-decoration: none;
 }
 
+.redes a{
+  display: flex;
+  align-items: center;
+
+  
+}
+
 .redes i {
-  margin-right: 5px;
+  margin-right: 7px;
+
 }
 
 @media screen and (max-width: 768px) {
