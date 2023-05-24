@@ -49,12 +49,12 @@ function suma(a, b) {
 
   if (!validateInteger(a)) {
     alert(`El numero ${a} no es entero. Se redondea`);
-    a = Number.parseInt(a);
+    a = Math.round(a);
   }
 
   if (!validateInteger(b)) {
     alert(`El numero ${b} no es entero. Se redondea`);
-    b = Number.parseInt(b);
+    b = Math.round(b);
   }
 
   return a + b;
@@ -68,11 +68,11 @@ console.log("----- 6.E -----");
 function validateIntegers(a, b) {
   if (!validateInteger(a)) {
     alert(`El numero ${a} no es entero. Se redondea`);
-    a = Number.parseInt(a);
+    a = Math.round(a);
   }
   if (!validateInteger(b)) {
     alert(`El numero ${b} no es entero. Se redondea`);
-    b = Number.parseInt(b);
+    b = Math.round(b);
   }
 
   return [a, b];
