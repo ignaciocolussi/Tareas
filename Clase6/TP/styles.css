@@ -290,6 +290,36 @@ section.publicidad-horizontal {
   align-items: center;
 }
 
+section.banner-registro{
+    margin-top: 15px;
+    background-color: #002060;
+    color: #f4f4f4;
+    text-decoration: none;
+    width: 70%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.banner-registro a{
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+section.banner-registro a:hover{
+    text-decoration: underline;
+}
+
+
+section.banner-registro a:visited{
+    text-decoration: underline;
+    color: #f4f4f4;
+}
+
+
+
 footer {
   background-color: #002060;
   color: #fff;
@@ -459,4 +489,6 @@ footer {
     align-items: center;
   
   }
+
+  
 }
