@@ -11,11 +11,9 @@ const codigoPostal = document.querySelector("#codigoPostal");
 const dni = document.querySelector("#dni");
 const nombreTitulo = document.querySelector("#nombreTitulo");
 
-// ejecutar la funcion rellerarCampos al cargar la pagina usando el evento load
 window.addEventListener("load", rellenarCampos);
 
 function rellenarCampos(){
-  //tomar los datos del local storage bajo la clave datosRegistro y convertirlos en un objeto para luego rellenar los campos del formulario
   if(localStorage.getItem("datosRegistro")){
   const datosRegistro = JSON.parse(localStorage.getItem("datosRegistro"));
   nombre.value = datosRegistro.nombre;
@@ -100,7 +98,6 @@ function validarEdad() {
   }
 };
 
-// Una funcion validar telefono debe aceptar solo numeros, ni letras ni caracteres especiales, ni espacios ni parentesis y debe tener al menos 7 digitos
 function validarTelefono() {
   if (telefono.value.length < 7) {
     telefono.nextElementSibling.innerHTML =
