@@ -110,13 +110,16 @@ button:active {
 
 .modal-contenido{
   width: 500px;
-  height: 300px;
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   text-align: center;
   position: relative;
+}
+
+.modal-cuerpo{
+  overflow: scroll;
 }
 
 .modal-cerrar{
@@ -140,4 +143,10 @@ button:active {
 .modal-cerrar span{
   cursor: pointer;
   font-size: 20px;
+}
+
+.modal-pie{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }

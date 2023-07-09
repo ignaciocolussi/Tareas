@@ -11,6 +11,27 @@ const codigoPostal = document.querySelector("#codigoPostal");
 const dni = document.querySelector("#dni");
 const nombreTitulo = document.querySelector("#nombreTitulo");
 
+// ejecutar la funcion rellerarCampos al cargar la pagina usando el evento load
+window.addEventListener("load", rellenarCampos);
+
+function rellenarCampos(){
+  //tomar los datos del local storage bajo la clave datosRegistro y convertirlos en un objeto para luego rellenar los campos del formulario
+  if(localStorage.getItem("datosRegistro")){
+  const datosRegistro = JSON.parse(localStorage.getItem("datosRegistro"));
+  nombre.value = datosRegistro.nombre;
+  email.value = datosRegistro.email;
+  password.value = datosRegistro.password;
+  repeticionPassword.value = datosRegistro.repeticionPassword;
+  edad.value = datosRegistro.edad;
+  telefono.value = datosRegistro.telefono;
+  direccion.value = datosRegistro.direccion;
+  ciudad.value = datosRegistro.ciudad;
+  codigoPostal.value = datosRegistro.codigoPostal;
+  dni.value = datosRegistro.dni;
+  nombreTitulo.innerHTML = datosRegistro.nombre;
+  }
+}
+
 function validarNombre() {
   if (nombre.value.length < 6) {
     nombre.nextElementSibling.innerHTML =
@@ -274,32 +295,6 @@ function enviarDatos() {
     codigoPostal: codigoPostal.value,
     dni: dni.value,
   };
-  // var queryString = Object.keys(datos)
-  //   .map((key) => key + "=" + datos[key])
-  //   .join("&");
-  // var url = "http://curso-dev-2021.herokuapp.com/newsletter?" + queryString;
-  // fetch(url)
-  //   .then(function (response) {
-  //     if (response.ok) {
-  //       return response.json();
-  //     } else {
-  //       throw "Error en la llamada Ajax";
-  //     }
-  //   })
-  //   .then(function (data) {
-  //     console.log(data);
-  //     var modal = document.getElementById("modal");
-  //     modal.classList.remove("hidden");
-  //     var modalContenido = document.getElementById("modalContenido");
-  //     modalContenido.innerHTML = "Datos enviados correctamente";
-  //   })
-  //   .catch(function (err) {
-  //     console.log(err);
-  //     var modal = document.getElementById("modal");
-  //     modal.classList.remove("hidden");
-  //     var modalContenido = document.getElementById("modalContenido");
-  //     modalContenido.innerHTML = "Error al enviar los datos";
-  //   });
 
   // Hago la  request 
 
@@ -319,6 +314,7 @@ function enviarDatos() {
     .then(response => response.text())
     .then(result => {
       console.log(result)
+      localStorage.setItem("datosRegistro", raw);
       document.querySelector("#modalCuerpo").innerHTML = result;
       modalContenido.classList.toggle("modal-cerrar");
       modal.classList.toggle("modal-cerrar");
