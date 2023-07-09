@@ -9,6 +9,7 @@ const direccion = document.querySelector("#direccion");
 const ciudad = document.querySelector("#ciudad");
 const codigoPostal = document.querySelector("#codigoPostal");
 const dni = document.querySelector("#dni");
+const nombreTitulo = document.querySelector("#nombreTitulo");
 
 function validarNombre() {
   if (nombre.value.length < 6) {
@@ -272,3 +273,11 @@ if (
 
 
   form.addEventListener("submit", validarFormulario);
+
+  //Extra
+
+  function actualizarNombreTitulo(e) {
+    nombreTitulo.innerHTML = e.target.value;
+  }
+
+  nombre.addEventListener("input", actualizarNombreTitulo);
