@@ -276,8 +276,13 @@ if (
 
   //Extra
 
+
   function actualizarNombreTitulo(e) {
     nombreTitulo.innerHTML = e.target.value;
   }
 
-  nombre.addEventListener("input", actualizarNombreTitulo);
+  nombre.addEventListener("keydown", actualizarNombreTitulo);
+  nombre.addEventListener("focus", actualizarNombreTitulo);
+
+
+  
