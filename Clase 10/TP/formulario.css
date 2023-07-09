@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+form {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+
+.form-control .error.hidden {
+  display: none;
+}
+
+.form-control .error {
+  color: #db0d1e;
+  font-size: 14px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
+
+.form-control .error::before {
+  content: "⚠ ";
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #002060;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0038ac;
+}
+
+button:active {
+  background-color: #002060;
+}
+
+
+@media (min-width: 576px) {
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .form-control {
+    width: 48%;
+  }
+}
+
+/*modal*/
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-contenido{
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+  position: relative;
+}
+
+.modal-cerrar{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-cabecera{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-cabecera h2{
+  width: 100%;
+
+}
+
+/* modal-cerrar esta dentro de modal-cabecera junto con un span, deberia verse el span en el centro y la clase modal-cerrar a la derecha al final*/
+
+.modal-cerrar span{
+  cursor: pointer;
+  font-size: 20px;
+}
